@@ -1,8 +1,8 @@
 # smed
 
-Simple editor for AWS SecretsManager.
+Simple editor for [AWS SecretsManager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
 
-Create/edit key/value (json) Secrets in your editor.
+Create and edit [json](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html) Secrets in your editor.
 
 ## Install
 
