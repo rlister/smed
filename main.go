@@ -28,20 +28,20 @@ func init() {
 }
 
 func main() {
+	create := flag.Bool("c", false, "view secrets")
 	list := flag.Bool("l", false, "list secrets")
 	view := flag.Bool("v", false, "view secrets")
-	create := flag.Bool("c", false, "view secrets")
 
 	flag.Parse()
 	args := flag.Args()
 
 	switch {
+	case *create:
+		createSecrets(args)
 	case *list:
 		listSecrets(args)
 	case *view:
 		viewSecrets(args)
-	case *create:
-		createSecrets(args)
 	case len(args) == 1:
 		editSecret(args[0])
 	default:
