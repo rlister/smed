@@ -101,6 +101,12 @@ func edit(data string) string {
 	}
 
 	cmd := exec.Command(editor(), f.Name())
+
+	// handle io for terminal editors
+	cmd.Stdin = os.Stdin
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+
 	if err = cmd.Run(); err != nil {
 		panic(err)
 	}
